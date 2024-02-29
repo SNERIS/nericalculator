@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My HTML page</title>
+        <script>
+        function PromptUser() {
+            var  text;
+            console.log("Ckemiii");
+            var name = window.prompt('Enter your name');
+            if (name !=null || name !="") {
+                text = "Hello " + name;
+            }
+            document.getElementById("demo").innerHTML = text
+        }
+        </script>
+    </head>
+    <body>
+        <button type="button"
+        onclick="PromptUser();">Writte the name</button>
+        <p id="demo">tttt</p>
+    </body>
+</html>

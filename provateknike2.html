@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .subscribe-button{
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 15px;
+                padding-left: 15px;
+                background-color: black;
+                color: white;
+                border-radius: 50px;
+                font-weight: bold;
+                cursor: pointer;
+                margin-bottom: 30px;
+                border: none;
+            }
+
+            body{
+                font-family: Arial;
+                padding-bottom: 110px;
+            }
+
+            .input-element{
+                padding: 10px;
+                font-size: 15px;
+            }
+
+            .button-element{
+                font-size: 15px;
+                background-color: green;
+                color: white;
+                padding-top: 12px;
+                padding-bottom: 12px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border: none;
+            }
+            
+            .change-button{
+                background-color: rgb( 240, 240, 240);
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <p>YouTube Subscribe Button</p>
+        <button class="js-subscribe-button subscribe-button" onclick="subscribe();">Subscribe</button>
+        <p>Amazon Shipping Calculator</p>
+        <p>Orders under $40 = +$10 shipping</p>
+        <p>Orders over $40 = FREE shipping</p>
+        <input placeholder="Cost of order" class="js-order-cost input-element" onkeydown="pressEnter();">
+        <button onclick="calculateTotal();" class="button-element">Calculate</button>
+        <p class="js-show-total"></p>
+        
+        <script>
+            function pressEnter() {
+                if(event.key === 'Enter') {
+                    calculateTotal();
+                }
+            }
+
+            function calculateTotal() {
+                const orderCost = document.querySelector('.js-order-cost');
+                let final = Number(orderCost.value);
+
+                if (final < 40) {
+                    final = final + 10;
+                }
+
+                document.querySelector('.js-show-total').innerHTML = `$${final}`;
+            }
+
+            function subscribe() {
+                let subscribeButton = document.querySelector('.js-subscribe-button');
+                if (subscribeButton.innerText === 'Subscribe') {
+                    subscribeButton.innerText = 'Subscribed';
+                    subscribeButton.classList.add('change-button');
+                } else {
+                    subscribeButton.innerText = 'Subscribe';
+                    subscribeButton.classList.remove('change-button');
+                }
+            }    
+        </script>
+    </body>
+</html>

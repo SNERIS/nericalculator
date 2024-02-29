@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detyra Shtepie</title>
+        <style>
+            .cart-button{
+                background-color: rgb( 255, 216, 20);
+                border: none;
+                padding-left: 30px;
+                padding-right: 30px; 
+                padding-top: 5px;
+                padding-bottom: 5px;
+                border-radius: 15px;
+            }
+            .request-button{
+                background-color: black;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            .schedule{
+                background-color: rgb( 230, 230, 230);
+                color: black;
+                font-weight: bold;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .on{
+                background-color: black;
+                color: white;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .off{
+                background-color: rgb( 230, 230, 230);
+                color: black;
+                border: none;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            html{
+                background-color: yellow;
+            }
+
+        </style>
+    </head>
+    <body>
+        <button class="cart-button">Add to Cart</button>
+        <button class="request-button">Request now</button>
+        <button class="schedule">Schedule for later</button>
+        <br><br>
+        <button class="on button1" onclick="change1();
+        ">Gaming</button>
+        <button class="on button2" onclick="change2();
+        ">Music</button>
+        <button class="on button3" onclick="change3();
+        ">Tech</button>
+        <script>
+            function change1() {
+                const btnElm = document.querySelector('.button1');
+                if (btnElm.classList.contains('on')) {
+                    btnElm.classList.remove('on');
+                    btnElm.classList.add('off');
+                } else if (btnElm.classList.contains('off')) {
+                    btnElm.classList.remove('off');
+                    btnElm.classList.add('on');
+                }
+            }
+            function change2() {
+                const btnElm = document.querySelector('.button2');
+                if (btnElm.classList.contains('on')) {
+                    btnElm.classList.remove('on');
+                    btnElm.classList.add('off');
+                } else if (btnElm.classList.contains('off')) {
+                    btnElm.classList.remove('off');
+                    btnElm.classList.add('on');
+                }
+            }
+            function change3() {
+                const btnElm = document.querySelector('.button3');
+                if (btnElm.classList.contains('on')) {
+                    btnElm.classList.remove('on');
+                    btnElm.classList.add('off');
+                } else if (btnElm.classList.contains('off')) {
+                    btnElm.classList.remove('off');
+                    btnElm.classList.add('on');
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>

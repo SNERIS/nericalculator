@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <button onclick="showChoice('heads');">heads</button> <button onclick="showChoice('tails');">tails</button>
+        <p class="js-show-choice"></p>
+
+        <script>
+
+            /*
+            function showTails() {
+                document.querySelector('.js-show-choice').innerHTML = 'You chose: tails'
+            }
+
+            function showHeads() {
+                document.querySelector('.js-show-choice').innerHTML = 'You chose: heads'
+            }
+            */
+
+            function showChoice(choice) {
+                if (choice === 'heads') {
+                    document.querySelector('.js-show-choice').innerHTML = 'You chose: heads'
+                } else {
+                    document.querySelector('.js-show-choice').innerHTML = 'You chose: tails'
+                }
+            }
+        </script>
+    </body>
+</html>

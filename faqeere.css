@@ -1,0 +1,23 @@
+*{
+    background: cyan;
+}
+#messi{
+    font-size: 45px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    color: aliceblue;
+    background-color: red;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: antiquewhite;
+    border: 2px dotted red;
+    padding: 15px;
+    border-radius: 12px;
+    float: left;
+}
+footer{
+    font-style: italic;
+}
